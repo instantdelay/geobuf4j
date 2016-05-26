@@ -1,1 +1,10 @@
 language: java
+
+cache:
+   directories:
+   - $HOME/protobuf
+
+before_install:
+   - bash install-protobuf.sh
+
+script: mvn test -DprotocExecutable=$HOME/protobuf/protoc
