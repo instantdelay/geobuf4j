@@ -6,5 +6,4 @@ cache:
 
 before_install:
    - bash install-protobuf.sh
-
-script: mvn test -DprotocExecutable=$HOME/protobuf/protoc
+   - echo "MAVEN_OPTS='-DprotocExecutable=$HOME/protobuf/protoc'" > ~/.mavenrc
